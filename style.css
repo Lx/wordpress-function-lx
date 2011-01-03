@@ -23,3 +23,9 @@ http://alexpeters.net/
 #main {
     text-shadow: none;
 }
+
+/* Widen navigation buttons so that their text is in line with the */
+/* rest of the page's content. */
+#navigation a {
+    padding: 5px 20px;
+}
