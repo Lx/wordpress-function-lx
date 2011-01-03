@@ -29,3 +29,8 @@ http://alexpeters.net/
 #navigation a {
     padding: 5px 20px;
 }
+
+/* Prevent "leave a comment" links from spanning two lines. */
+.postmetabottom .metacomments {
+    width: auto;
+}
