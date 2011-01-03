@@ -18,3 +18,8 @@ http://alexpeters.net/
 */
 
 @import url("../Function_pdd/style.css");
+
+/* Disable drop shadow on content text. */
+#main {
+    text-shadow: none;
+}
