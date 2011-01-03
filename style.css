@@ -39,3 +39,16 @@ http://alexpeters.net/
 .sf-menu a {
     text-transform: none !important;
 }
+
+/* Custom handwritten site logo. */
+#logo h1 a {
+    display: block;
+    width: 154px;
+    height: 45px;
+    background: url("header-name.png");
+    margin-left: -5px;
+    text-indent: -9999px;
+}
+#logo #desc {
+    margin-top: 0;
+}
