@@ -34,3 +34,8 @@ http://alexpeters.net/
 .postmetabottom .metacomments {
     width: auto;
 }
+
+/* Don't capitalise menu item names. */
+.sf-menu a {
+    text-transform: none !important;
+}
