@@ -7,7 +7,20 @@
 
 <div id="sidebar">
 <ul>
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar') ) : ?>
+<?php
+    $got_sidebar = false;
+    if (function_exists('dynamic_sidebar')) {
+        if (is_home()) {
+            $got_sidebar = dynamic_sidebar('home-sidebar');
+        }
+        // Fall back to the standard sidebar if on the home page and a
+        // home-specific sidebar isn't defined.
+        if (!$got_sidebar) {
+            $got_sidebar = dynamic_sidebar('sidebar');
+        }
+    }
+    if (!$got_sidebar) :
+?>
 
 <li class="boxed">
 <a href="http://wordpress.org/support/"><img src="<?php bloginfo('template_directory'); ?>/images/shot.jpg" alt="Function" style="border:1px solid #ddd;" /></a>
