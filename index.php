@@ -27,11 +27,13 @@ get_header(); ?>
 <div class="cleared"></div>
 </div><!-- /postcontent -->
         
+<?php if (get_the_tags() || comments_open()) : ?>
 <div class="postmetabottom">
 <div class="tags"><?php the_tags('Tags: ', ', ', ''); ?></div>
 <div class="metacomments"><?php if ( comments_open() ) : ?><span><?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></span><?php endif; ?></div>
 <div class="cleared"></div>
 </div><!-- /postmetabottom -->
+<?php endif; ?>
 </div><!-- /post -->
 
 <?php endwhile; ?>

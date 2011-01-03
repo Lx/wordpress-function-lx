@@ -29,11 +29,13 @@ get_header(); ?>
 </div><!-- /postcontent -->
 <small><?php edit_post_link('(Edit this entry?)','',''); ?></small>
         
+<?php if (get_the_tags() || comments_open()) : ?>
 <div class="postmetabottom">
 <div class="tags"><?php the_tags('Tags: ', ', ', ''); ?></div>
 <div class="metacomments"><?php if ( comments_open() ) : ?><?php comments_rss_link(__('Comments <abbr title="Really Simple Syndication">RSS</abbr> feed')); ?><?php endif; ?></div>
 <div class="cleared"></div>
 </div><!-- /postmetabottom -->
+<?php endif; ?>
 </div><!-- /post -->
 
 <div id="comments">
