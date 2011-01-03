@@ -1,0 +1,20 @@
+/*
+Theme Name: Function Lx
+Theme URI: https://github.com/lx/wordpress-function-lx
+Description: Modified version of the Function theme, used on alexpeters.net
+Author: Alex Peters
+Author URI: http://alexpeters.net/
+Template: Function_pdd
+
+This is a child of the Function WordPress theme:
+http://stocktradingonline.net/wordpress-theme-function/
+
+Specifically, the one that shows pages on the drop-down menu instead of
+categories, retrieved on Sunday January 2, 2010:
+http://stocktradingonline.net/downloads/Function_pdd.zip
+
+Minor modifications have been made to suit my own site:
+http://alexpeters.net/
+*/
+
+@import url("../Function_pdd/style.css");
