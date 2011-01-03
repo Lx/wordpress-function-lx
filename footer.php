@@ -87,7 +87,7 @@
 
 <div id="credits">
 <div id="creditsleft">
-<p>Content copyright &copy; <?php bloginfo('name'); ?>. Powered by <a href="http://wordpress.org/extend/themes/">Wordpress</a> and <a href="http://stocktradingonline.net/wordpress-theme-function/">Function</a>.</p>
+<p>Content copyright &copy; <?php bloginfo('name'); ?>. Powered by <a rel="generator" title="Semantic Personal Publishing Platform" href="http://wordpress.org/">WordPress</a> and <a href="http://stocktradingonline.net/wordpress-theme-function/">Function</a>.</p>
 
 </div><!-- /creditsleft -->
         
