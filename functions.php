@@ -8,4 +8,10 @@ register_sidebar(array(
     'after_title'       => '</h3>',
 ));
 
+if (function_exists('register_nav_menus')) {
+    register_nav_menus(array(
+        'bottom_header'     => 'Bottom (grey) header menu',
+    ));
+}
+
 ?>

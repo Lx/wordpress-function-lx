@@ -89,9 +89,13 @@
 
 
 <div id="catnav">
-        <ul class="sf-menu">
-		<?php wp_list_pages('depth=3&title_li=0&sort_column=menu_order'); ?>
-        </ul><!-- /nav -->
+    <?php
+        wp_nav_menu(array(
+            'theme_location'    => 'bottom_header',
+            'container'         => 'none',
+            'menu_class'        => 'sf-menu',
+        ));
+    ?>
  <div class="cleared"></div>
 </div>
 <!-- /catnav -->
