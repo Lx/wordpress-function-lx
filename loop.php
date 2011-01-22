@@ -20,10 +20,10 @@
       </div>
     </div>
     <div class="postcontent">
-      <?php the_content('(Read More &raquo;)'); ?>
+      <?php is_search() ? the_excerpt() : the_content('(Read More &raquo;)'); ?>
       <div class="cleared"></div>
     </div>
-    <?php if (get_the_tags() || comments_open()) : ?>
+    <?php if (!is_search() && (get_the_tags() || comments_open())) : ?>
     <div class="postmetabottom">
       <div class="tags"><?php the_tags('Tags: ', ', ', ''); ?></div>
       <div class="metacomments">
