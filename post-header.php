@@ -8,7 +8,9 @@
       <?php the_title(); ?>
     </a>
   </h2>
-  <div class="postmetatop">
-    Posted <?php the_date() ?> under <?php the_category(', ') ?>
-  </div>
+  <?php if (get_post_type() != 'page') : ?>
+    <div class="postmetatop">
+      Posted <?php the_date() ?> under <?php the_category(', ') ?>
+    </div>
+  <?php endif; ?>
 </div>
