@@ -43,7 +43,11 @@ function mytheme_comment_lx($comment, $args, $depth) {
                 </div>
                 <div class="cleared"></div>
             </div>
-        </li>
+        <?php /*
+            WordPress manages the closing of <li> elements because
+            nested comments may need to be rendered first.  See the
+            documentation for wp_list_comments.
+        */ ?>
     <?php
 }
 
