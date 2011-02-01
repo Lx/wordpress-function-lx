@@ -26,9 +26,8 @@ if (function_exists('wp_list_comments')) :
 
         <div id="commentsbox">
             <?php if ( ! empty($comments_by_type['comment']) ) :
-                $count = count($comments_by_type['comment']);
-                ($count !== 1) ? $txt = "Comments: " : $txt = "Comment:"; ?>
-                <h3><?php echo $count . " " . $txt; ?></h3>
+                $count = count($comments_by_type['comment']); ?>
+                <h3><?php echo $count == 1 ? 'One comment' : "$count comments"; ?></h3>
                 <ul class="commentlist">
                     <?php wp_list_comments('type=comment&callback=mytheme_comment_lx'); ?>
                 </ul>

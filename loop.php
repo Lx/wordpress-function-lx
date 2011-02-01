@@ -17,9 +17,9 @@
           <span>
             <?php
               comments_popup_link(
-                'Leave a Comment',
-                '1 Comment',
-                '% Comments'
+                'Leave a comment',
+                'One comment',
+                '% comments'
               );
             ?>
           </span>
