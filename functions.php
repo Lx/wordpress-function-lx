@@ -27,7 +27,7 @@ function mytheme_comment_lx($comment, $args, $depth) {
                     <?php endif; ?>
                     <div class="commentmetadata">
                         <a href="#comment-<?php comment_ID(); ?>">
-                            <?php comment_date('F jS, Y'); ?>
+                            <?php comment_date(); ?>
                             at
                             <?php comment_time(); ?>
                         </a>
