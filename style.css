@@ -52,3 +52,8 @@ http://alexpeters.net/
 #logo #desc {
     margin-top: 0;
 }
+
+/* Increase size difference between <h3> and <h4> tags. */
+h4 {
+    font-size: 1.1em !important;
+}
