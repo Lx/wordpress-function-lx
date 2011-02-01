@@ -17,32 +17,33 @@ if (function_exists('register_nav_menus')) {
 function mytheme_comment_lx($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     ?>
-        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
             <div id="comment-<?php comment_ID(); ?>">
                 <?php echo get_avatar($comment, $size = '50'); ?>
                 <div class="commentbody">
-                    <div class="author"><?php comment_author_link() ?></div>
+                    <div class="author"><?php comment_author_link(); ?></div>
                     <?php if ($comment->comment_approved == '0') : ?>
                         <em>(Your comment is awaiting moderation...)</em>
                     <?php endif; ?>
                     <div class="commentmetadata">
-                        <a href="#comment-<?php comment_ID() ?>" title="">
-                            <?php comment_date('F jS, Y') ?>
+                        <a href="#comment-<?php comment_ID(); ?>">
+                            <?php comment_date('F jS, Y'); ?>
                             on
-                            <?php comment_time() ?>
+                            <?php comment_time(); ?>
                         </a>
                         <?php edit_comment_link('edit', '&nbsp;&nbsp;', ''); ?>
                     </div>
-                    <?php comment_text() ?>
-                </div><!-- /commentbody -->
+                    <?php comment_text(); ?>
+                </div>
                 <div class="reply">
                     <?php comment_reply_link(array_merge($args, array(
                         'depth'     => $depth,
                         'max_depth' => $args['max_depth']
-                    ))) ?>
-                </div><!-- /reply -->
+                    ))); ?>
+                </div>
                 <div class="cleared"></div>
-            </div><!-- /comment -->
+            </div>
+        </li>
     <?php
 }
 
