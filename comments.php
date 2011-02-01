@@ -120,7 +120,7 @@ else :
 <?php if ('open' == $post->comment_status) : ?>
     <div class="cleared"></div>
     <div id="respond">
-        <h3>Leave a Comment:</h3>
+        <h3>Leave a comment</h3>
         <?php if (function_exists('cancel_comment_reply_link')) {
             //2.7 comment loop code ?>
             <div id="cancel-comment-reply">
