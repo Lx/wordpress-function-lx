@@ -30,7 +30,7 @@ if (function_exists('wp_list_comments')) :
                 ($count !== 1) ? $txt = "Comments: " : $txt = "Comment:"; ?>
                 <h3><?php echo $count . " " . $txt; ?></h3>
                 <ul class="commentlist">
-                    <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+                    <?php wp_list_comments('type=comment&callback=mytheme_comment_lx'); ?>
                 </ul>
             <?php endif; ?>
 
