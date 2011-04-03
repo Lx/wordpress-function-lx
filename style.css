@@ -70,3 +70,35 @@ a.more-link {
     vertical-align: 1px;
     white-space: nowrap;
 }
+
+/* Put navigation links in a single visual box. */
+.wp-pagenavi {
+    -moz-border-radius: 8px 8px 8px 8px;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+}
+#navigation .wp-pagenavi span.pages,
+#navigation .wp-pagenavi span.current,
+#navigation .wp-pagenavi span.extend,
+#navigation .wp-pagenavi a,
+#navigation .wp-pagenavi a:hover {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+#navigation .wp-pagenavi span.pages {
+    padding-right: 1ex;
+}
+#navigation .wp-pagenavi span.current,
+#navigation .wp-pagenavi span.extend,
+#navigation .wp-pagenavi a,
+#navigation .wp-pagenavi a:hover {
+    -moz-border-radius: 0;
+    border-left: 1px solid #d1d1d1;
+    padding: 0 1ex;
+}
+#navigation .wp-pagenavi a:hover {
+    background: #e9e9e9;
+}
