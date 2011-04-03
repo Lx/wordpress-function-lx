@@ -115,3 +115,15 @@ a.more-link {
 #comments .commentbody .commentmetadata em {
     color: #666666;
 }
+
+/* I prefer Palatino. */
+h1, h2, h3, h4, h5, h6 {
+    font-family:
+        "Palatino Linotype",
+        Palatino,
+        Rockwell,
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+}
