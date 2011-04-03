@@ -22,15 +22,15 @@ function mytheme_comment_lx($comment, $args, $depth) {
                 <?php echo get_avatar($comment, $size = '50'); ?>
                 <div class="commentbody">
                     <div class="author"><?php comment_author_link(); ?></div>
-                    <?php if ($comment->comment_approved == '0') : ?>
-                        <em>(Your comment is awaiting moderation...)</em>
-                    <?php endif; ?>
                     <div class="commentmetadata">
                         <a href="#comment-<?php comment_ID(); ?>">
                             <?php comment_date(); ?>
                             at
                             <?php comment_time(); ?>
                         </a>
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em>(comment awaiting moderation)</em>
+                        <?php endif; ?>
                         <?php edit_comment_link('edit', '&nbsp;&nbsp;', ''); ?>
                     </div>
                     <?php comment_text(); ?>
