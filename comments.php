@@ -50,13 +50,7 @@ if (function_exists('wp_list_comments')) :
         </div><!-- /commentsbox -->
 
 
-    <?php else : // this is displayed if there are no comments so far ?>
-        <?php if ('open' == $post->comment_status) :
-            // If comments are open, but there are no comments.
-        else : ?>
-
-        <?php endif;
-    endif;
+    <?php endif;
 else :
     //WP 2.6 and older Comment Loop
     /* This variable is for alternating comment background */
