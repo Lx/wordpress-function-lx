@@ -20,95 +20,32 @@ if (function_exists('post_password_required'))
         }
     }
 }
-if (function_exists('wp_list_comments')) :
-    //WP 2.7 Comment Loop
-    if ( have_comments() ) : ?>
-
-        <div id="commentsbox">
-            <?php if ( ! empty($comments_by_type['comment']) ) :
-                $count = count($comments_by_type['comment']); ?>
-                <h3><?php echo $count == 1 ? 'One comment' : "$count comments"; ?></h3>
-                <ul class="commentlist">
-                    <?php wp_list_comments('type=comment&callback=mytheme_comment_lx'); ?>
-                </ul>
-            <?php endif; ?>
-
-            <div id="navigation">
-                <div class="alignleft"><?php previous_comments_link() ?></div>
-                <div class="alignright"><?php next_comments_link() ?></div>
-                <div class="cleared"></div>
-            </div><!-- /navigation -->
-
-            <?php if ( ! empty($comments_by_type['pings']) ) :
-                $countp = count($comments_by_type['pings']);
-                ($countp !== 1) ? $txtp = "Trackbacks / Pingbacks for this entry:" : $txtp = "Trackback or Pingback for this entry:"; ?>
-                <h3 id="trackbacktitle"><?php echo $countp . " " . $txtp; ?></h3>
-                <ul class="trackback">
-                    <?php wp_list_comments('type=pings&callback=mytheme_ping'); ?>
-                </ul>
-            <?php endif; ?>
-        </div><!-- /commentsbox -->
-
-
-    <?php endif;
-else :
-    //WP 2.6 and older Comment Loop
-    /* This variable is for alternating comment background */
-    $oddcomment = 'alt';
-    ?>
-
-    <!-- You can start editing here. -->
+if ( have_comments() ) : ?>
     <div id="commentsbox">
-        <?php if ($comments) : ?>
-            <h3 id="comments"><?php comments_number('No comments filed', 'One comment', '% comments' );?> to &#8220;<?php the_title(); ?>&#8221;&#58;</h3>
+        <?php if ( ! empty($comments_by_type['comment']) ) :
+            $count = count($comments_by_type['comment']); ?>
+            <h3><?php echo $count == 1 ? 'One comment' : "$count comments"; ?></h3>
             <ul class="commentlist">
-                <?php foreach ( $comments as $comment ) : ?>
-                    <li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-
-                        <?php
-
-                            if (function_exists('get_avatar')) {
-                                echo get_avatar( $comment, 50);
-                            } else {
-                                //alternate gravatar code for < 2.5
-                                $grav_url = "http://www.gravatar.com/avatar.php?gravatar_id=
-" . md5($email) . "&default=" . urlencode($default) . "&size=" . $size;
-                                echo "<img src='$grav_url' height='50px' width='50px' />";
-                            }
-                        ?>
-                        <div class="commentbody">
-                            <div class="author"><?php comment_author_link() ?></div>
-                            <?php if ($comment->comment_approved == '0') : ?>
-                                <em>(Your comment is awaiting moderation...)</em>
-                            <?php endif; ?>
-
-                            <div class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> on <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
-
-                            <?php comment_text() ?>
-                        </div><!-- /commentbody -->
-                        <div class="cleared"></div>
-                    </li>
-
-                    <?php /* Changes every other comment to a different class */
-                        if ('alt' == $oddcomment) $oddcomment = '';
-                        else $oddcomment = 'alt';
-                    ?>
-                <?php endforeach; /* end for each comment */ ?>
-            </ol>
-        <?php else : // this is displayed if there are no comments so far ?>
-
-            <?php if ('open' == $post->comment_status) : ?>
-                <!-- If comments are open, but there are no comments. -->
-            <?php else : // comments are closed ?>
-                <!-- If comments are closed. -->
-                <p class="nocomments">Comments are closed.</p>
-
-            <?php endif; ?>
-
+                <?php wp_list_comments('type=comment&callback=mytheme_comment_lx'); ?>
+            </ul>
         <?php endif; ?>
-    <br/></div><!-- /commentsbox -->
 
-<?php endif; // 2.6 and older Comment Loop end ?>
+        <div id="navigation">
+            <div class="alignleft"><?php previous_comments_link() ?></div>
+            <div class="alignright"><?php next_comments_link() ?></div>
+            <div class="cleared"></div>
+        </div><!-- /navigation -->
+
+        <?php if ( ! empty($comments_by_type['pings']) ) :
+            $countp = count($comments_by_type['pings']);
+            ($countp !== 1) ? $txtp = "Trackbacks / Pingbacks for this entry:" : $txtp = "Trackback or Pingback for this entry:"; ?>
+            <h3 id="trackbacktitle"><?php echo $countp . " " . $txtp; ?></h3>
+            <ul class="trackback">
+                <?php wp_list_comments('type=pings&callback=mytheme_ping'); ?>
+            </ul>
+        <?php endif; ?>
+    </div><!-- /commentsbox -->
+<?php endif; ?>
 
 <?php if ( comments_open() ) : ?><?php else : ?><p class="nocomments">Comments for this entry are closed.</p><?php endif; ?>
 <?php if ('open' == $post->comment_status) : ?>
