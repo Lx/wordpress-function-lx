@@ -127,3 +127,35 @@ h1, h2, h3, h4, h5, h6 {
         Times,
         serif;
 }
+
+#sidebar ul.compact-archives a {
+    border-width: 0px;
+    display: inline;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+#sidebar ul.compact-archives strong {
+    display: block;
+    border-bottom: 1px solid #d1d1d1;
+    margin-bottom: 0.5ex;
+    clear: both;
+}
+#sidebar ul.compact-archives a,
+#sidebar ul.compact-archives span {
+    float: left;
+    display: block;
+    width: 49px;
+    text-align: center;
+}
+#sidebar ul.compact-archives strong a {
+    display: inline;
+    float: none;
+    width: auto;
+}
+#sidebar ul.compact-archives strong a:hover {
+    background: none;
+}
+#sidebar ul.compact-archives span {
+    color: #999999;
+}
