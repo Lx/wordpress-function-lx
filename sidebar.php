@@ -13,6 +13,9 @@
         if (is_home()) {
             $got_sidebar = dynamic_sidebar('home-sidebar');
         }
+        elseif (is_archive()) {
+            $got_sidebar = dynamic_sidebar('archive-sidebar');
+        }
         // Fall back to the standard sidebar if on the home page and a
         // home-specific sidebar isn't defined.
         if (!$got_sidebar) {
