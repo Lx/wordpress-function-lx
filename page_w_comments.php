@@ -29,7 +29,6 @@ get_header(); ?>
 <div class="linkpages"><?php wp_link_pages(); ?></div>
 <div class="cleared"></div>
 </div><!-- /postcontent -->
-<small><?php edit_post_link('(Edit this entry?)','',''); ?></small>
 </div><!-- /post -->
 
 <div id="comments">

@@ -24,7 +24,6 @@ get_header(); ?>
 <div class="cleared"></div>
 <div class="linkpages"><?php wp_link_pages(); ?></div>
 </div><!-- /postcontent -->
-<small><?php edit_post_link('(Edit this entry?)','',''); ?></small>
         
 <?php if (get_the_tags() || comments_open()) : ?>
 <div class="postmetabottom">
