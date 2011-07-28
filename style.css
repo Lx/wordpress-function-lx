@@ -176,3 +176,7 @@ parent CSS, so make it the same for non-"alt"-classed items too.
     background: #f0f0f0;
     border: 1px solid #dedede;
 }
+/* And so, threaded comments don't need to be indented so much. */
+#comments ul.commentlist li ul.children li {
+    margin: 15px 0 0 0;
+}
