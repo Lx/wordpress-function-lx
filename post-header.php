@@ -10,7 +10,7 @@
   </h2>
   <?php if (get_post_type() != 'page') : ?>
     <div class="postmetatop">
-      Posted <?php the_date() ?> under <?php the_category(', ') ?>
+      Posted <?php echo get_the_date() ?> under <?php the_category(', ') ?>
     </div>
   <?php endif; ?>
 </div>
