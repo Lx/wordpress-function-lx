@@ -58,4 +58,23 @@ function mytheme_comment_lx($comment, $args, $depth) {
     <?php
 }
 
+function lx_non_empty_post_title($title) {
+    if ($title == '') {
+        return _('Untitled post');
+    }
+    if ($title == trim(sprintf(_('Private: %s'), ''))) {
+        return sprintf(_('Private: %s'), _('Untitled post'));
+    }
+    if ($title == trim(sprintf(_('Protected: %s'), ''))) {
+        return sprintf(_('Protected: %s'), _('Untitled post'));
+    }
+    return $title;
+}
+add_filter('the_title', 'lx_non_empty_post_title');
+
+// It would be nice in the future to make all post titles in the title
+// bar unique (or closer to unique) by including the post date for
+// untitled posts, e.g. "Untitled post from August 23, 2004."
+add_filter('single_post_title', 'lx_non_empty_post_title');
+
 ?>
