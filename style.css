@@ -159,3 +159,20 @@ h1, h2, h3, h4, h5, h6 {
 #sidebar ul.compact-archives span {
     color: #999999;
 }
+
+/*
+"alt"-classed comment items get this styling applied to them in the
+parent CSS, so make it the same for non-"alt"-classed items too.
+*/
+#comments ul.commentlist li {
+    background: #e3e3e3;
+    border: 1px solid #ddd;
+}
+/* Then, apply alternate colouring to comments by depth. */
+#comments ul.commentlist li.depth-2,
+#comments ul.commentlist li.depth-4,
+#comments ul.commentlist li.depth-6,
+#comments ul.commentlist li.depth-8 {
+    background: #f0f0f0;
+    border: 1px solid #dedede;
+}
